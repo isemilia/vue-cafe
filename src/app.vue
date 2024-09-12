@@ -1,11 +1,14 @@
 <template>
     <div class='main'>
-        <aside>sidebar</aside>
-        <main>content</main>
+        <Sidebar></Sidebar>
+        <!--        <main>content</main>-->
     </div>
 </template>
 
-<script setup lang='ts'></script>
+<script setup lang='ts'>
+import Sidebar from './components/sidebar/sidebar.vue';
+
+</script>
 
 <style scoped>
 .main {
