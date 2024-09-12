@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import './assets/scss/fonts.scss';
+
+:root {
+  --font-primary: 'Barlow', sans-serif;
+
+  --bg-surface-dark: #1F1D2B;
+  --bg-surface-primary: #252836;
+  --bg-surface-secondary: #2D303E;
+
+  --clr-accent-primary: #EA7C69;
+
+  --clr-neutral-primary: #FFFFFF;
+  --clr-neutral-secondary: #ABBBC2;
+
+  --clr-border-primary: #393C49;
+
+  font-family: var(--font-primary);
+}
