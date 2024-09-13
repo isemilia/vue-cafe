@@ -24,7 +24,7 @@ const props = defineProps<{ icon: Component, isActive?: boolean }>();
     --item-color: transparent;
     --button-color: transparent;
 
-    --button-size: 56px;
+    --button-size: var(--sidebar-button-size);
     --item-size: 80px;
 
     position: relative;
@@ -78,6 +78,7 @@ const props = defineProps<{ icon: Component, isActive?: boolean }>();
     }
 
     &-button {
+      cursor: pointer;
       width: var(--button-size);
       height: var(--button-size);
       display: grid;
