@@ -3,18 +3,18 @@
     <div class='sidebar-item-edge sidebar-item-edge--top' aria-hidden='true'></div>
     <div class='sidebar-item-edge sidebar-item-edge--bottom' aria-hidden='true'></div>
 
-    <div class='sidebar-item-button'>
+    <RouterLink :to='props.href' class='sidebar-item-button'>
       <div class='sidebar-item-icon'>
         <component :is='props.icon' />
       </div>
-    </div>
+    </RouterLink>
   </div>
 </template>
 
 <script setup lang='ts'>
 import type { Component } from 'vue';
 
-const props = defineProps<{ icon: Component, isActive?: boolean }>();
+const props = defineProps<{ icon: Component, isActive?: boolean, href: string }>();
 </script>
 
 <style lang='scss'>
@@ -34,7 +34,7 @@ const props = defineProps<{ icon: Component, isActive?: boolean }>();
     border-radius: 12px 0 0 12px;
     margin-right: -12px;
 
-    &--active {
+    &:has(.router-link-active), &--active {
       --icon-color: var(--clr-neutral-primary);
       --item-color: var(--bg-surface-primary);
       --button-color: var(--clr-accent-primary);

@@ -1,8 +1,10 @@
 <template>
-    <div class='main'>
-        <Sidebar></Sidebar>
-        <!--        <main>content</main>-->
-    </div>
+  <div class='main'>
+    <Sidebar />
+    <main>
+      <RouterView />
+    </main>
+  </div>
 </template>
 
 <script setup lang='ts'>
@@ -12,7 +14,8 @@ import Sidebar from './components/sidebar/sidebar.vue';
 
 <style scoped>
 .main {
-    height: 100%;
-    display: flex;
+  height: 100%;
+  display: flex;
+  column-gap: 24px;
 }
 </style>

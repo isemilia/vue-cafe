@@ -5,7 +5,7 @@
     </div>
 
     <div class='sidebar-main'>
-      <SidebarItem v-for='item in sidebarItems' :icon='item.icon' :isActive='item.isActive' />
+      <SidebarItem v-for='item in sidebarItems' :icon='item.icon' :isActive='item.isActive' :href='item.href' />
     </div>
 
     <div class='sidebar-footer'>
@@ -33,9 +33,9 @@ interface TSidebarItem {
 }
 
 const sidebarItems: TSidebarItem[] = [
-  { icon: HomeIcon, isActive: true },
-  { icon: GraphIcon, isActive: false },
-  { icon: SettingsIcon, isActive: false }
+  { icon: HomeIcon, href: '/' },
+  { icon: GraphIcon, href: '/reports' },
+  { icon: SettingsIcon, href: '/settings' }
 ];
 
 </script>
