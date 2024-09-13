@@ -5,9 +5,7 @@
     </div>
 
     <div class='sidebar-main'>
-      <SidebarItem :icon='HomeIcon' :isActive='true' />
-      <SidebarItem :icon='GraphIcon' />
-      <SidebarItem :icon='SettingsIcon' />
+      <SidebarItem v-for='item in sidebarItems' :icon='item.icon' :isActive='item.isActive' />
     </div>
 
     <div class='sidebar-footer'>
@@ -27,6 +25,19 @@ import SettingsIcon from './icons/settings-icon.vue';
 import SidebarLogo from '../sidebar-logo/sidebar-logo.vue';
 import LogoutIcon from './icons/logout-icon.vue';
 import GraphIcon from './icons/graph-icon.vue';
+import { Component } from 'vue';
+
+interface TSidebarItem {
+  isActive: boolean;
+  icon: Component;
+}
+
+const sidebarItems: TSidebarItem[] = [
+  { icon: HomeIcon, isActive: true },
+  { icon: GraphIcon, isActive: false },
+  { icon: SettingsIcon, isActive: false }
+];
+
 </script>
 
 <style scoped lang='scss'>
